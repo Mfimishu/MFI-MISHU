@@ -1,0 +1,170 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+ 
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #040615;
+}
+
+.clock
+{
+    width: 350px;
+    height: 350px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    
+}
+.clock::before
+{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #2196f3;
+    z-index: 10000;
+    border-radius: 50%;
+}
+.hour,
+.min,
+.sec
+{
+    position: absolute;
+}
+.hour, .hr
+{
+    width: 200px;
+    height: 200px;
+}
+.min, .mn
+{
+    width: 230px;
+    height: 230px;
+}
+.sec, .sc
+{
+    width: 250px;
+    height: 250px;
+}
+
+.hr, .mn, .sc
+{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+.hr::before
+{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 100px;
+    background: #fff;
+}
+.mn::before
+{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 110px;
+    background: #fff;
+}
+.sc::before
+{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background: #2196f3;
+}
+#digitalClock
+{
+    display: flex;
+    color: #fff;
+    font-size: 4em;
+    margin-top: 20px;
+}
+
+@import url(font-family: 'Titillium Web', sans-serif;)
+
+*
+{
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+
+}
+body{
+display: flex;
+justify-content: top;
+align-items: center;
+min-height: 100vh;
+background: #000;
+
+}
+h2{
+
+position: relative;
+margin: 20px 0 0;
+font-size: 4em;
+font-weight: 900;
+color: #fff;
+z-index: 1;
+overflow: hidden;
+}
+h2:before
+{
+content: '';
+position: absolute;
+left: 0;
+width: 120%;
+height: 100%;
+background: linear-gradient(90deg, transparent 0%, #000 5%, #000 100% );
+animation: animate 5.5s linear forwards;
+animation-delay: 2s;
+}
+@keyframes animate
+{
+0%
+{
+left: 110%;
+
+}
+100%
+{
+left: -20%;
+}
+}
+h2 span
+{
+
+color: green;
+}
+
+
+video
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+z-index: 2;
+pointer-events: none;
+mix-blend-mode: screen;
+
+
+}
